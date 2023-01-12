@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Lanzadera</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <div id="login">
+        <div class="title container">
+          <div
+            class="text-center text-black text-uppercase p-3 mb-5 fw-bold texto rounded"
+          >
+            Lanzadera
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div  class="col-md-6">
+              <div id="form-box" class=" rounded-3 border-light">
+                <!-- Este es el select de tipo de producto -->
+                <div class="text-center selectbox">
+                    <div class="form-floating">
+                        <select class="form-select" onchange="selectedProduct()" id="ProductSelect">
+                          <option selected>------------</option>
+                          <option value="1">Hogar</option>
+                          <option value="2">Autos</option>
+                          <option value="3">Vida</option>
+                          <option value="3">Multirriesgo</option>
+                          <option value="3">Salud</option>
+                        </select>
+                        <label for="floatingSelect">Seleccione tipo de producto</label>
+                      </div>
+                </div>
+                <!-- Este es el imput para el Ramo -->
+                <div class="selectbox">
+                    <form class="form was-validated " onsubmit="return false">
+                  <div class="form-floating" id="imputRamo">
+                    <input class="form-control" id="imputsincomas" type="number" maxlength="4"  oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);buscarnumero();" id="Ramonumber" required placeholder="Ramo a comprobar">
+                    <div class="invalid-feedback">Por favor complete este campo con maximo 4 dijitos</div>
+                    <div class="valid-feedback">! Asi es ¡</div>
+                    <label>Ramo a comprobar</label>
+                  </div>
+                <!-- Este es el select de la operativa -->
+                  
+                    <div id="selectOperativa" class="form-floating">
+
+
+
+                    </div>
+         
+                  <!-- Este es el boton de envio -->
+                  <div class="form-group text-center" style="padding: 10px;">
+                    <input
+                    id="buttonguar"
+                      type="submit"
+                      name="submit"
+                      class="btn btn-primary"
+                      value="Guardar"
+                      onclick="guardar();listar();"
+                    />
+                  </div>
+                  
+                  </form>
+                  <div id="tablebox"  class="text-center form-floating">
+
+
+
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/code.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+  </body>
+</html>
