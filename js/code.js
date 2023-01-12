@@ -12,7 +12,7 @@ function selectedProduct() {
    $("#imputRamo").hide(100);
  $("#selectOperativa").hide(100);
     $("#buttonguar").hide(100);
-
+$("#imputsincomas").val("");
   if (selected == "Autos") {
     $("#imputRamo").show(1000);
 
