@@ -15,7 +15,7 @@ function selectedProduct() {
   } else {
     $("#imputRamo").hide(1000);
     Swal.fire({
-      title: "<strong>En <u>Construccion</u></strong>",
+      title: "<strong>En <u>Construcción</u></strong>",
       icon: "info",
       html: "Pronto <b>Habilitaremos</b> esta opcion, ",
       showCloseButton: true,
