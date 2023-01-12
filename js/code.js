@@ -9,9 +9,13 @@ function selectedProduct() {
   /* Para obtener el texto */
   var combo = document.getElementById("ProductSelect");
   var selected = combo.options[combo.selectedIndex].text;
+   $("#imputRamo").hide(100);
+ $("#selectOperativa").hide(100);
+    $("#buttonguar").hide(100);
 
   if (selected == "Autos") {
     $("#imputRamo").show(1000);
+
   } else {
     $("#imputRamo").hide(1000);
     Swal.fire({
